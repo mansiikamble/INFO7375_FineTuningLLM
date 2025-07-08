@@ -37,23 +37,78 @@ Interactive Mode
 python# Run interactive modernization
 modernizer.interactive_mode()
 
-📁 Project Structure
+
 historical-text-modernizer/
-├── src/
-│   ├── dataset_creation.py     # Dataset preparation
-│   ├── model_training.py       # LoRA fine-tuning
-│   ├── evaluation.py           # Custom metrics
-│   ├── inference.py            # Modernization pipeline
-│   └── improvements.py         # Quality optimizations
-├── data/
-│   ├── train_data_expanded.json
-│   ├── val_data_expanded.json
-│   └── test_data_expanded.json
-├── models/
-│   └── historical-modernizer-final/
-├── notebooks/
-│   └── complete_pipeline.ipynb
-└── README.md
+├── 📁 data/
+│   ├── 📄 README.md                          # Dataset documentation
+│   ├── 📁 raw/
+│   │   ├── shakespeare_sources.txt           # Original Shakespeare sources
+│   │   ├── legal_sources.txt                 # Legal document sources
+│   │   ├── historical_sources.txt            # Historical speech sources
+│   │   └── biblical_sources.txt              # Religious text sources
+│   ├── 📁 processed/
+│   │   ├── train_data_expanded.json          # Training data (212 examples)
+│   │   ├── val_data_expanded.json            # Validation data (45 examples)
+│   │   └── test_data_expanded.json           # Test data (47 examples)
+│   └── validate_dataset.py                   # Dataset validation script
+├── 📁 src/
+│   ├── __init__.py
+│   ├── dataset_creation.py                   # Step 4: Dataset creation
+│   ├── model_training.py                     # Step 5: LoRA fine-tuning
+│   ├── hyperparameter_optimization.py       # Step 6: Hyperparameter experiments
+│   ├── baseline_comparison.py               # Step 6b: Baseline evaluation
+│   ├── inference_pipeline.py                # Step 7: Inference system
+│   ├── custom_metrics.py                    # Step 8: Evaluation metrics
+│   ├── enhanced_training.py                 # Step 9: Training with metrics
+│   └── modernizer.py                        # Main modernizer class
+├── 📁 models/
+│   ├── .gitkeep                             # Keep empty directory
+│   ├── historical-modernizer-final/         # Final trained model
+│   │   ├── adapter_config.json
+│   │   ├── adapter_model.bin
+│   │   ├── tokenizer_config.json
+│   │   └── tokenizer.json
+│   └── checkpoints/                         # Training checkpoints
+├── 📁 notebooks/
+│   ├── complete_pipeline.ipynb              # Full assignment notebook
+│   ├── data_exploration.ipynb               # Dataset analysis
+│   ├── model_evaluation.ipynb               # Results analysis
+│   └── hyperparameter_analysis.ipynb       # Optimization analysis
+├── 📁 scripts/
+│   ├── setup_environment.py                 # Environment setup
+│   ├── download_models.py                   # Model download utility
+│   ├── run_training.py                      # Training script
+│   └── evaluate_model.py                    # Evaluation script
+├── 📁 tests/
+│   ├── __init__.py
+│   ├── test_dataset.py                      # Dataset tests
+│   ├── test_modernizer.py                   # Modernizer tests
+│   └── test_metrics.py                      # Metrics tests
+├── 📁 docs/
+│   ├── assignment_documentation.md          # Complete assignment write-up
+│   ├── methodology.md                       # Technical methodology
+│   ├── results_analysis.md                  # Results documentation
+│   └── video_script.md                      # Video presentation script
+├── 📁 results/
+│   ├── training_logs/                       # Training output logs
+│   ├── evaluation_results/                  # Evaluation outputs
+│   ├── visualizations/                      # Charts and graphs
+│   └── comparison_tables/                   # Performance comparisons
+├── 📁 examples/
+│   ├── basic_usage.py                       # Simple usage examples
+│   ├── batch_processing.py                  # Batch processing demo
+│   └── interactive_demo.py                  # Interactive demonstration
+├── 📄 README.md                             # Main project documentation
+├── 📄 requirements.txt                      # Python dependencies
+├── 📄 requirements-dev.txt                  # Development dependencies
+├── 📄 setup.py                              # Package installation
+├── 📄 pyproject.toml                        # Modern Python configuration
+├── 📄 .gitignore                            # Git ignore rules
+├── 📄 .gitattributes                        # Git attributes (for LFS if needed)
+├── 📄 LICENSE                               # Project license
+├── 📄 CONTRIBUTING.md                       # Contribution guidelines
+├── 📄 CHANGELOG.md                          # Version history
+└── 📄 video_script.md                       # 10-minute video script
 
 📈 Performance Analysis
 Hyperparameter Optimization
